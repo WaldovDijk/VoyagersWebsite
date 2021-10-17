@@ -58,6 +58,8 @@ const handleIcons = (icon: string) => {
       return '\\e904';
     case 'tripadvisor':
       return '\\e905';
+    case 'arrow':
+      return '\\e906';
   }
 };
 

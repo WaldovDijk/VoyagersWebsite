@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Icon } from '../../../Style/Icons';
+import InfoIcons from './InfoIcons';
+import InfoSection from './InfoSection';
 
 const InfoHeaderWrapper = styled('div')`
   background-color: #677c8b;
@@ -14,14 +16,6 @@ const InfoHeaderBody = styled('div')`
   grid-auto-flow: column;
   margin: auto;
   height: 100%;
-`;
-
-const InfoSection = styled('div')`
-  display: grid;
-  grid-auto-flow: column;
-  width: max-content;
-  align-items: center;
-  margin: auto;
 `;
 
 const InfoMedia = styled('div')`
@@ -39,58 +33,41 @@ const CustomIcon = styled(Icon)`
   padding: 0.5rem;
   cursor: pointer;
 `;
+
+const InfoData = [
+  {
+    icon: 'location',
+    content: 'Geldersekade 2 1012 BH Amsterdam',
+  },
+  {
+    icon: 'phone',
+    content: '0031 (0)20 6246871',
+  },
+  {
+    icon: 'email',
+    content: 'info@hotelvoyagers.com',
+  },
+];
+
+const IconData = [
+  { link: 'https://www.instagram.com/voyagerscoffeeshop/', icon: 'instagram' },
+  { link: 'https://www.facebook.com/VoyagersHotelAmsterdam', icon: 'facebook' },
+  {
+    link: 'https://www.tripadvisor.com/Hotel_Review-g188590-d3668507-Reviews-Voyagers_Hotel_Amsterdam-Amsterdam_North_Holland_Province.html',
+    icon: 'tripadvisor',
+  },
+];
+
 const InfoHeader = () => {
   return (
     <InfoHeaderWrapper>
       <InfoHeaderBody>
-        <InfoSection>
-          <Icon size={2.4} marginRight={0.5} icon='location' />
-          Geldersekade 2 1012 BH Amsterdam
-        </InfoSection>
-        <InfoSection>
-          <Icon size={2.4} marginRight={0.5} icon='phone' />
-          0031 (0)20 6246871
-        </InfoSection>
-        <InfoSection>
-          <Icon size={2.4} marginRight={0.5} icon='email' />
-          info@hotelvoyagers.com
-        </InfoSection>
-        <InfoMedia>
-          <CustomIcon
-            onClick={() =>
-              window.open(
-                'https://www.instagram.com/voyagerscoffeeshop/',
-                '_blank'
-              )
-            }
-            size={3}
-            marginRight={0.5}
-            icon='instagram'
-          />
-
-          <CustomIcon
-            onClick={() =>
-              window.open(
-                'https://www.facebook.com/VoyagersHotelAmsterdam',
-                '_blank'
-              )
-            }
-            size={3}
-            marginRight={0.5}
-            icon='facebook'
-          />
-          <CustomIcon
-            onClick={() =>
-              window.open(
-                'https://www.tripadvisor.com/Hotel_Review-g188590-d3668507-Reviews-Voyagers_Hotel_Amsterdam-Amsterdam_North_Holland_Province.html',
-                '_blank'
-              )
-            }
-            size={3}
-            marginRight={0.5}
-            icon='tripadvisor'
-          />
-        </InfoMedia>
+        {InfoData.map((data, i) => {
+          return (
+            <InfoSection key={i} icon={data.icon} content={data.content} />
+          );
+        })}
+        <InfoIcons IconData={IconData} />
       </InfoHeaderBody>
     </InfoHeaderWrapper>
   );
