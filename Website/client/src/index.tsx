@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './Page';
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
-import { GlobalIconStyle } from './Style/Icons';
+
+import './Style/Icons/fonts.scss';
 
 export const AppRoot = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
@@ -30,7 +31,6 @@ export const AppRoot = createGlobalStyle`
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalIconStyle />
     <AppRoot />
     <App />
   </React.StrictMode>,

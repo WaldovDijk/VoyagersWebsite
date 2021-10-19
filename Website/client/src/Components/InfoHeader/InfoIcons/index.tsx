@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Icon } from '../../../../Style/Icons';
+import { Icon } from '../../../Style/Icons';
 
 const MediaWrapper = styled('div')`
   display: grid;
