@@ -46,6 +46,13 @@ const Nav = styled(NavLink)`
 
   &.active {
     color: #0dc0c0;
+    & ${NavTitle}::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 6.7rem;
+      border-bottom: 3px solid #0dc0c0;
+    }
   }
 `;
 
@@ -107,7 +114,7 @@ const NavItem = ({
 }: {
   title: string;
   route: string;
-  subtitles?: { title: string; route: string }[];
+  subtitles?: { title: string; route: string; exact?: boolean }[];
 }) => {
   const CheckSubtitles = () => {
     return subtitles ? false : true;
@@ -120,9 +127,13 @@ const NavItem = ({
       <Nav
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
+        onMouseDown={() => setHover(true)}
         to={route}
         exact={CheckSubtitles()}
         activeClassName='active'
+        onClick={(e) => {
+          if (subtitles) e.preventDefault();
+        }}
       >
         <NavTitle>{title}</NavTitle>
         {subtitles && <Icon size={2.4} icon='arrow' />}
@@ -133,7 +144,13 @@ const NavItem = ({
           onMouseLeave={() => setHover(false)}
         >
           {subtitles.map((data, i) => (
-            <SubLink key={i} to={data.route} activeClassName='active'>
+            <SubLink
+              onMouseUp={() => setHover(false)}
+              key={i}
+              to={data.route}
+              activeClassName='active'
+              exact={data.exact}
+            >
               {data.title}
             </SubLink>
           ))}

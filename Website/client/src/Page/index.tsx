@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
+
 import Footer from '../Components/Footer';
 import InfoHeader from '../Components/InfoHeader';
 import Navigation from '../Components/Navigation';
@@ -14,6 +15,7 @@ const App = () => {
     <WebsiteWrapper>
       <InfoHeader />
       <Navigation />
+      {/*
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/about' component={Home} />
@@ -21,7 +23,7 @@ const App = () => {
         <Route exact path='/rooms' component={Home} />
         <Route exact path='/contact' component={Home} />
       </Switch>
-      <Footer />
+      <Footer /> */}
     </WebsiteWrapper>
   );
 };

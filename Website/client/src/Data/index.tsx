@@ -85,6 +85,7 @@ const NavData = [
     title: 'about us',
     route: '/about',
     subtitles: [
+      { title: 'about', route: '/about', exact: true },
       { title: 'general', route: '/about/general' },
       { title: 'policies', route: '/about/policies' },
       { title: 'services', route: '/about/services' },
@@ -100,6 +101,7 @@ const NavData = [
     title: 'rooms',
     route: '/rooms',
     subtitles: [
+      { title: 'all rooms', route: '/rooms', exact: true },
       { title: 'single - basic', route: '/rooms/single' },
       { title: 'double - ensuite', route: '/rooms/double' },
       { title: 'twin - ensuite', route: '/rooms/twin' },

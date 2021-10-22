@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 import { Icon } from '../../../Style/Icons';
+import { BreakPoints } from '../../../Style';
 
 const MediaWrapper = styled('div')`
-  display: grid;
+  display: none;
   grid-auto-flow: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: ${BreakPoints.xl}) {
+    display: grid;
+  }
 `;
 
 const CustomIcon = styled(Icon)`

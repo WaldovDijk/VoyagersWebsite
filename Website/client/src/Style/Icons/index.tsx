@@ -45,6 +45,8 @@ const handleIcons = (icon: string) => {
       return '\\e905';
     case 'arrow':
       return '\\e906';
+    case 'menu':
+      return '\\e907';
   }
 };
 
