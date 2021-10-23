@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FooterData } from '../../Data';
 import { BreakPoints } from '../../Style';
-import FooterItem from './FooterItem';
+import FooterItem, { ItemWrapper } from './FooterItem';
 
 const FooterWrapper = styled('div')`
   margin-top: auto;
@@ -9,7 +9,7 @@ const FooterWrapper = styled('div')`
   position: absolute;
   bottom: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 0;
 `;
 
 const FooterBody = styled('div')`
@@ -24,14 +24,29 @@ const FooterBody = styled('div')`
   }
 `;
 
-const ItemWrapper = styled('div')`
+const Wrapper = styled('div')`
   margin: auto;
   font-size: 1.4rem;
   display: grid;
   grid-auto-flow: row;
+  align-items: start;
+  padding: 3rem;
+  grid-gap: 2rem;
   @media (min-width: ${BreakPoints.md}) {
     grid-auto-flow: column;
-    font-size: clamp(1rem, 1.2vw, 1.6rem);
+    font-size: clamp(1.4rem, 1.2vw, 1.6rem);
+    grid-template-columns: repeat(2, 1fr);
+    & ${ItemWrapper}:last-child {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+    }
+  }
+  @media (min-width: ${BreakPoints.lg}) {
+    grid-template-columns: repeat(3, 1fr);
+    & ${ItemWrapper}:last-child {
+      grid-row: auto;
+      grid-column: auto;
+    }
   }
 `;
 
@@ -39,19 +54,22 @@ const FooterCopy = styled('div')`
   border-top: 1px dotted #fff;
   padding: 3rem;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: #fff;
+  @media (min-width: ${BreakPoints.md}) {
+    font-size: 1.6rem;
+  }
 `;
 
 const Footer = () => {
   return (
     <FooterWrapper>
       <FooterBody>
-        <ItemWrapper>
+        <Wrapper>
           {FooterData.map((data, i) => {
             return <FooterItem key={i} FooterData={data} />;
           })}
-        </ItemWrapper>
+        </Wrapper>
       </FooterBody>
       <FooterCopy>
         &copy; {new Date().getFullYear()}. Voyager Hotel Amsterdam, all right
