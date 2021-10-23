@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FooterData } from '../../Data';
+import { BreakPoints } from '../../Style';
 import FooterItem from './FooterItem';
 
 const FooterWrapper = styled('div')`
@@ -8,13 +9,30 @@ const FooterWrapper = styled('div')`
   position: absolute;
   bottom: 0;
   width: 100%;
+  z-index: -1;
 `;
 
 const FooterBody = styled('div')`
-  width: 120rem;
   margin: auto;
+
+  padding: 5rem 2rem 3rem;
+  @media (min-width: ${BreakPoints.md}) {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: clamp(20rem, 90%, 120rem);
+    padding: 0;
+  }
+`;
+
+const ItemWrapper = styled('div')`
+  margin: auto;
+  font-size: 1.4rem;
   display: grid;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
+  @media (min-width: ${BreakPoints.md}) {
+    grid-auto-flow: column;
+    font-size: clamp(1rem, 1.2vw, 1.6rem);
+  }
 `;
 
 const FooterCopy = styled('div')`
@@ -29,9 +47,11 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <FooterBody>
-        {FooterData.map((data, i) => {
-          return <FooterItem key={i} FooterData={data} />;
-        })}
+        <ItemWrapper>
+          {FooterData.map((data, i) => {
+            return <FooterItem key={i} FooterData={data} />;
+          })}
+        </ItemWrapper>
       </FooterBody>
       <FooterCopy>
         &copy; {new Date().getFullYear()}. Voyager Hotel Amsterdam, all right

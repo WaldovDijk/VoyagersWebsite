@@ -15,6 +15,7 @@ const App = () => {
     <WebsiteWrapper>
       <InfoHeader />
       <Navigation />
+      <Footer />
       {/*
       <Switch>
         <Route exact path='/' component={Home} />
@@ -23,7 +24,7 @@ const App = () => {
         <Route exact path='/rooms' component={Home} />
         <Route exact path='/contact' component={Home} />
       </Switch>
-      <Footer /> */}
+      */}
     </WebsiteWrapper>
   );
 };

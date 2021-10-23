@@ -1,15 +1,21 @@
 import styled from 'styled-components';
+import { BreakPoints } from '../../../Style';
 import { Icon } from '../../../Style/Icons';
 
 const ItemWrapper = styled('div')`
   color: #fff;
   display: grid;
   grid-auto-flow: row;
+  grid-template-columns: 100%;
   grid-row-gap: 2rem;
-  font-size: 1.6rem;
   justify-content: space-between;
   margin: auto;
-  padding: 4rem;
+  padding: 1rem;
+  width: 100%;
+  @media (min-width: ${BreakPoints.md}) {
+    padding: clamp(2rem, 1.2vw, 4rem);
+    width: max-content;
+  }
 `;
 const ItemTitle = styled('div')`
   display: grid;
