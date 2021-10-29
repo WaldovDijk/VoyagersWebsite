@@ -1,26 +1,17 @@
 import styled from 'styled-components';
-import TopBanner from './content/top-banner.jpg';
+import HomeRooms from '../../Components/Home/Rooms';
 
 const HomeWrapper = styled('div')`
   display: grid;
-  grid-template-rows: clamp(10rem, 30vw, 50rem);
-  font-size: 5rem;
-`;
-
-const HomeBanner = styled('div')`
-  background-image: url(${TopBanner});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
+  grid-template-columns: clamp(20rem, 90%, 120rem);
+  padding: 4rem;
+  justify-content: center;
 `;
 
 const Home = () => {
   return (
     <HomeWrapper>
-      <HomeBanner />
-      Home
+      <HomeRooms />
     </HomeWrapper>
   );
 };

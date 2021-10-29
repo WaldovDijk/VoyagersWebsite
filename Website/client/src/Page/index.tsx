@@ -6,17 +6,48 @@ import InfoHeader from '../Components/InfoHeader';
 import Navigation from '../Components/Navigation';
 import Home from './Home';
 
-const WebsiteWrapper = styled(Router)`
-  font-size: 5rem;
+import TopBanner from '../Data/Images/top-banner.jpg';
+import { BreakPoints } from '../Style';
+
+const WebsiteWrapper = styled('div')`
+  display: grid;
+
+  grid-template-rows: 7rem auto 1fr auto;
+  min-height: 100%;
+
+  @media (min-width: ${BreakPoints.md}) {
+    grid-template-rows: 5.4rem 7rem auto 1fr auto;
+  }
+`;
+
+const BannerWrapper = styled('div')`
+  display: grid;
+  grid-template-rows: clamp(10rem, 30vw, 50rem);
+`;
+
+const Banner = styled('div')`
+  background-image: url(${TopBanner});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
 `;
 
 const App = () => {
   return (
     <WebsiteWrapper>
-      <InfoHeader />
-      <Navigation />
-      <Footer />
-      {/*
+      <Router>
+        <InfoHeader />
+        <Navigation />
+        <BannerWrapper>
+          <Banner />
+        </BannerWrapper>
+        <Switch>
+          <Route exact path='/' component={Home} />
+        </Switch>
+        <Footer />
+        {/*
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/about' component={Home} />
@@ -25,6 +56,7 @@ const App = () => {
         <Route exact path='/contact' component={Home} />
       </Switch>
       */}
+      </Router>
     </WebsiteWrapper>
   );
 };

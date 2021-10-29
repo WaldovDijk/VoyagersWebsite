@@ -30,6 +30,8 @@ const Nav = styled('div')`
   color: black;
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   justify-content: center;
+  position: sticky;
+  top: 0;
 `;
 
 const NavLogo = styled('img')`

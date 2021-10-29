@@ -6,10 +6,7 @@ import FooterItem, { ItemWrapper } from './FooterItem';
 const FooterWrapper = styled('div')`
   margin-top: auto;
   background-color: #677c8b;
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  z-index: 0;
 `;
 
 const FooterBody = styled('div')`

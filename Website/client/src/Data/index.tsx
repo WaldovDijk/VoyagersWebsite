@@ -1,3 +1,10 @@
+import { link } from 'fs';
+
+import HomeRoom1 from './Images/Home/room1.jpg';
+import HomeRoom2 from './Images/Home/room2.jpg';
+import HomeRoom3 from './Images/Home/room3.jpg';
+import HomeRoomBanner from './Images/price-overlay.png';
+
 const InfoData = [
   {
     icon: 'location',
@@ -115,4 +122,33 @@ const NavData = [
   },
 ];
 
-export { IconData, InfoData, NavData, FooterData };
+const HomeData = {
+  rooms: {
+    title: 'Check Out Our Comfortable Yet Affordable Rooms',
+    banner: HomeRoomBanner,
+    cards: [
+      {
+        name: 'room 2 - double ensuite',
+        url: HomeRoom1,
+        price: '75.00',
+        maxPers: 2,
+        beds: '1 Double, En Suite',
+      },
+      {
+        name: 'room 8 - triple basic',
+        url: HomeRoom2,
+        price: '75.00',
+        maxPers: 3,
+        beds: '1 Bunk, 1 Single, Toilet just outside door',
+      },
+      {
+        name: 'room 9 - single basic',
+        url: HomeRoom3,
+        price: '55.00',
+        maxPers: 1,
+        beds: '1 Single',
+      },
+    ],
+  },
+};
+export { IconData, InfoData, NavData, FooterData, HomeData };
