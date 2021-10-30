@@ -32,6 +32,7 @@ const Nav = styled('div')`
   justify-content: center;
   position: sticky;
   top: 0;
+  z-index: 5;
 `;
 
 const NavLogo = styled('img')`
@@ -75,7 +76,7 @@ const MobileItemWrapper = styled('div')`
 const Navigation = () => {
   const size = useWindowSize();
   const [open, setOpen] = useState<boolean>(false);
-
+  console.log(size);
   return (
     <Nav>
       <NavWrapper>

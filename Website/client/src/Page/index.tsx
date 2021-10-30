@@ -14,6 +14,7 @@ const WebsiteWrapper = styled('div')`
 
   grid-template-rows: 7rem auto 1fr auto;
   min-height: 100%;
+  box-sizing: border-box;
 
   @media (min-width: ${BreakPoints.md}) {
     grid-template-rows: 5.4rem 7rem auto 1fr auto;

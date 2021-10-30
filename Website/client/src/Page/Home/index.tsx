@@ -3,8 +3,8 @@ import HomeRooms from '../../Components/Home/Rooms';
 
 const HomeWrapper = styled('div')`
   display: grid;
-  grid-template-columns: clamp(20rem, 90%, 120rem);
   padding: 4rem;
+  grid-template-columns: clamp(20rem, 90%, 120rem);
   justify-content: center;
 `;
 

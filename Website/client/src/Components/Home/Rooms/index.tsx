@@ -19,11 +19,6 @@ const RoomTitle = styled('div')`
   margin-bottom: 2rem;
 `;
 
-const RoomCard = styled('div')`
-  display: grid;
-  justify-items: center;
-`;
-
 const CardTitle = styled('div')`
   color: #7a7675;
   font-weight: bold;
@@ -42,40 +37,39 @@ const CardInfo = styled('div')`
   color: #7a7675;
   display: grid;
   grid-auto-flow: column;
+  grid-template-columns: auto;
+  grid-auto-columns: max-content;
   font-size: 1.3rem;
   align-items: center;
   line-height: 2.4rem;
-`;
-const CardImg = styled('div')`
-  background-image: url(${(props: { img: string }) => props.img});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 33rem;
-  height: 22rem;
-  margin-bottom: 2rem;
-  position: relative;
-`;
-const ImgBanner = styled('img')`
-  display: inline-block;
-  position: relative;
   width: 100%;
+  padding: 1rem;
+  justify-content: center;
+  text-align: center;
 `;
-const CardBanner = styled('div')`
-  position: absolute;
-  right: -0.8rem;
-  bottom: 3rem;
+const CardImg = styled('img')`
+  width: 100%;
+  border-radius: 0.8rem 0.8rem 0 0;
+  margin-bottom: 1rem;
 `;
-const CardCost = styled('div')`
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-weight: 700;
-  font-size: 1.4rem;
-  width: max-content;
+
+const RoomCard = styled('div')`
+  display: grid;
+  justify-items: center;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+
+  ${CardInfo}:nth-child(2n +2) {
+    background-color: #eee;
+  }
 `;
+
+const CardButton = styled('button')`
+  margin-top: 1rem;
+`;
+
 const HomeRooms = () => {
   const { rooms } = HomeData;
   return (
@@ -83,12 +77,8 @@ const HomeRooms = () => {
       <RoomTitle>{rooms.title}</RoomTitle>
       {rooms.cards.map((data, i) => (
         <RoomCard key={i}>
-          <CardImg img={data.url}>
-            <CardBanner>
-              <ImgBanner src={rooms.banner} />
-              <CardCost>&euro;{data.price} PN</CardCost>
-            </CardBanner>
-          </CardImg>
+          <CardImg src={data.url} />
+
           <CardTitle>{data.name}</CardTitle>
           <CardHr />
           <CardInfo>
@@ -99,6 +89,7 @@ const HomeRooms = () => {
           </CardInfo>
           <CardInfo>Beds: {data.beds}</CardInfo>
           <CardInfo>Price: &euro;{data.price} Per Night</CardInfo>
+          <CardButton disabled={true}>Booking currently unavailable</CardButton>
         </RoomCard>
       ))}
     </RoomWrapper>
