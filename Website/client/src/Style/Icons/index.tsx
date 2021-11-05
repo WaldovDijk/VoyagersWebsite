@@ -47,6 +47,8 @@ const handleIcons = (icon: string) => {
       return '\\e906';
     case 'menu':
       return '\\e907';
+    case 'person':
+      return '\\e908';
   }
 };
 

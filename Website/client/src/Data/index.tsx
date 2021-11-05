@@ -1,8 +1,9 @@
-import { link } from 'fs';
-
 import HomeRoom1 from './Images/Home/room1.jpg';
 import HomeRoom2 from './Images/Home/room2.jpg';
 import HomeRoom3 from './Images/Home/room3.jpg';
+import About1 from './Images/Home/about1.jpg';
+import About2 from './Images/Home/about2.jpg';
+import About3 from './Images/Home/about3.jpg';
 import HomeRoomBanner from './Images/price-overlay.png';
 
 const InfoData = [
@@ -147,6 +148,43 @@ const HomeData = {
         price: '55.00',
         maxPers: 1,
         beds: '1 Single',
+      },
+    ],
+  },
+  testimonials: {
+    title: 'testimonials',
+    data: [
+      {
+        name: 'kenneth',
+        content:
+          'Stayed at the Voyagers many times,just across the road from central station.Always found the staff very friendly and helpful. A steep climb up winding stairs to the single rooms but the same with most small hotels in Amsterdam.Well worth the stay for those on a limited budget.',
+        date: '1 June, 2013',
+      },
+      {
+        name: 'matt',
+        content:
+          'This is a very basic hotel, but one of the cleanest ive been in ,, the hotel is also a coffeeshop downstairs so you must be 18 years or older to stay,, the room i stayed in was the double with a very big tub shower, they also have single and triple rooms, the location is great 2 min from Central station, i would def stay he again.',
+        date: '18 June, 2013',
+      },
+    ],
+  },
+  about: {
+    title: 'about us',
+    data: [
+      {
+        img: About1,
+        content:
+          'Hotel voyagers , is a small independent open minded hotel for over 21s only, located above the Voyagers coffee shop. Squeezed between Amsterdam central station and zeedijk/redlight.',
+      },
+      {
+        img: About2,
+        content:
+          'Our of selection rooms are basic & clean, with amazing views of the surrounding canals buildings, we can offer single, double, twin, triple & 4 person rooms. The hotel has it own private entrance/no curfew. There is free wifi in the all rooms.',
+      },
+      {
+        img: About3,
+        content:
+          'As hotel we offer no breakfast, or parking, but this does not mean guests can not take advante of the amazing surroundings Factilies parking, coffeebars,restraunts pubs, clubs All to be found on the links page.',
       },
     ],
   },

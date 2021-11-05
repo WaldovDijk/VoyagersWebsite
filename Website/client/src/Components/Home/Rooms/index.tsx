@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
 import { HomeData } from '../../../Data';
+import { BreakPoints } from '../../../Style';
 import { Icon } from '../../../Style/Icons';
 
 const RoomWrapper = styled('div')`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  @media (min-width: ${BreakPoints.lg}) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   width: 100%;
+  margin-bottom: 4rem;
 `;
 
 const RoomTitle = styled('div')`
@@ -41,9 +46,8 @@ const CardInfo = styled('div')`
   grid-auto-columns: max-content;
   font-size: 1.3rem;
   align-items: center;
-  line-height: 2.4rem;
   width: 100%;
-  padding: 1rem;
+  padding: 1.4rem 1rem;
   justify-content: center;
   text-align: center;
 `;
@@ -60,6 +64,7 @@ const RoomCard = styled('div')`
   padding: 1rem;
   margin: 1rem;
   border-radius: 1rem;
+  box-shadow: 0.4rem 0.4rem 0.2rem rgba(0, 0, 0, 0.2);
 
   ${CardInfo}:nth-child(2n +2) {
     background-color: #eee;
@@ -84,7 +89,7 @@ const HomeRooms = () => {
           <CardInfo>
             Max People:{' '}
             {[...Array(data.maxPers)].map((el, i) => (
-              <Icon key={i} size={2} icon='phone' />
+              <Icon key={i} size={2} icon='person' />
             ))}
           </CardInfo>
           <CardInfo>Beds: {data.beds}</CardInfo>

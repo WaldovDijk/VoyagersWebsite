@@ -8,6 +8,7 @@ import Home from './Home';
 
 import TopBanner from '../Data/Images/top-banner.jpg';
 import { BreakPoints } from '../Style';
+import About from './About';
 
 const WebsiteWrapper = styled('div')`
   display: grid;
@@ -46,6 +47,7 @@ const App = () => {
         </BannerWrapper>
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/about' component={About} />
         </Switch>
         <Footer />
         {/*
