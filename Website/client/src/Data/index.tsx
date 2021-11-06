@@ -189,4 +189,211 @@ const HomeData = {
     ],
   },
 };
-export { IconData, InfoData, NavData, FooterData, HomeData };
+
+const AboutData = {
+  About: {
+    title: 'About Voyagers Hotel',
+    data: [
+      {
+        content:
+          'Voyagers Hotel Amsterdam is particularly well-suited to travelers who smoke, as the reception and lobby are in a coffeeshop, although smoking is not allowed in the rooms or the common areas of the hotel because smoke detectors throughout the building are extremely sensitive, and only a small amount of smoke will quickly trigger the fire alarm.',
+      },
+      {
+        content:
+          'Due to the coffeeshop being downstairs, the regulations applying to coffeeshop operation must be strictly observed (an age limit of eighteen years is enforced, and government-issued photo identification is required), despite the entrance to the rooms being separate from the coffeeshop.',
+      },
+      {
+        content:
+          'Voyagers Hotel Amsterdam has two single rooms with shared shower and toilet on the top floor. There is no lift in the building, so rooms can only be reached by climbing stairs.',
+      },
+      {
+        content:
+          'The two twin and two double rooms all have a canal view and private shower and toilet, except for the one in the basement, which only has a small window with a view to the street.',
+      },
+      {
+        content:
+          'One of the double rooms also has a bathtub. The only triple room has shared shower and toilet, as do the two quad rooms, which are both fitted with bunk beds.',
+      },
+    ],
+  },
+  General: {
+    title: 'General Information',
+    data: [
+      {
+        title: 'Number/type of rooms',
+        content:
+          'Voyagers Hotel Coffeeshop Amsterdam has 10 rooms in total: 2 singles basic, 1 double ensuite, 1 double shower in the basement, 2 twins ensuite, 1 triple basic, and 3 quads basis.',
+      },
+      {
+        title: 'City tax',
+        content:
+          '5,50% included. This 5,50% of the accommodation cost is charged on top of the listed price, is paid to the hotel and goes to public finances for the city of Amsterdam.',
+      },
+      {
+        title: 'Value Added Tax',
+        content: '6% included. Called BTW in Dutch.',
+      },
+      { title: 'Breakfast', content: 'Excluded, and not served.' },
+      {
+        title: 'Cancellation policy',
+        content:
+          '2 days. You can cancel your confirmed reservation without any charge up to 2 days before your arrival day.',
+      },
+    ],
+  },
+  Policies: {
+    title: 'Policies',
+    data: [
+      {
+        title: 'Receptions',
+        content: 'open 10:00-23:00, located in the coffeeshop downstairs.',
+      },
+      {
+        title: 'Check in',
+        content:
+          'from 15:00 until 23:00. The latest check in time possible is 23:00. You cannot check in after this deadline. Please note that the reception of the hotel is in the coffeeshop downstairs and is not possible to check in after the coffeeshop is closed, due to strict coffeeshop regulations. The hotel reception and coffeeshop is open every day (on Friday and Saturday too) from 10:00 until 23:00. See the age limit restriction too...      ',
+      },
+      { title: 'Check out', content: 'until 11:00.' },
+      {
+        title: 'Payment method',
+        content: 'in advance or upon arrival in full.',
+      },
+      { title: 'Credit card', content: 'no.' },
+      { title: 'Key deposit', content: 'no.' },
+      {
+        title: 'Curfew/lock out',
+        content:
+          'no, guests are issued a key card at check-in, which gives them 24 hour access to the hotel and their room.',
+      },
+      { title: 'Smoking', content: 'not allowed.' },
+      { title: 'Soft drugs', content: 'only allowed in the coffeeshop.' },
+      { title: 'Groups', content: 'stag and hen parties are not allowed.' },
+      {
+        title: 'Afe limit',
+        content:
+          'strictly from 18 years. All the guests must show their valid identity document with portrait photo as passport, identity card or driver license to check in. Please note that if you are younger than 18 you are not allowed to check in to the hotel or to enter the coffeeshop! See the check in time restriction too...',
+      },
+      { title: 'Children', content: 'strictly not allowed.' },
+      { title: 'Pets', content: 'strictly not allowed.' },
+      { title: 'Visitors', content: 'not allowed.' },
+    ],
+  },
+  Services: {
+    title: 'Services',
+    data: [
+      {
+        title: 'Internet',
+        content:
+          'Wi-Fi is available throughout the building free of charge. The signal on the top floor is weak.',
+      },
+      { title: 'Parking', content: 'no' },
+      { title: 'Bicycle storage', content: 'no' },
+      { title: 'Luggage room', content: 'no' },
+      { title: 'Lockers', content: 'no, the rooms are private.' },
+      { title: 'Security safe', content: 'no.' },
+      { title: 'Housekeeping', content: 'rooms are cleaned after check-out.' },
+      { title: 'Room service', content: 'no.' },
+      { title: 'Tourist information', content: 'no.' },
+    ],
+  },
+  Facilities: {
+    title: 'Facilities',
+    data: [
+      {
+        title: 'Furnishings/appliances',
+        content:
+          'bed, chair, bedside table, hanging space, lamp, sink, mirror, electrical outlet, and central heating.',
+      },
+      {
+        title: 'Linen, towels, soap',
+        content: 'are automatically provided free of charge.',
+      },
+      { title: 'Bar', content: 'no.' },
+      { title: 'Restaurant', content: 'no.' },
+      {
+        title: 'Common room',
+        content: 'no, but there is a coffeeshop downstairs.',
+      },
+      { title: 'Smoking room', content: 'no.' },
+      { title: 'Kitchen', content: 'no.' },
+      { title: 'Laundry', content: 'no.' },
+      { title: 'Air conditioning', content: 'no.' },
+      { title: 'Elevator', content: 'no, with steep and narrow stairs.' },
+      { title: 'Dsiabled facilities', content: 'no.' },
+    ],
+  },
+  Location: {
+    title: 'Location',
+    data: [
+      {
+        title: 'Hotel directions',
+        content:
+          'Walk 3 minutes from Amsterdam Centraal Station, the main railway station for the city (with a direct connection to Schiphol Airport, approximately 20 minutes by train) and public transportation hub, with metro, tram, and bus stops.',
+      },
+      {
+        title: 'Public transport',
+        content: 'Walking distance from Amsterdam Central Station.',
+      },
+      { title: 'Shuttle service', content: 'no.' },
+    ],
+  },
+};
+
+const ReservationData = {
+  title: 'Reservations & Bookings',
+  content:
+    'Please click the below button to check our availability for the upcoming weeks / months and see if we have any rooms available.',
+};
+
+const RoomsData = {
+  Single: {
+    title: 'Single Basic Room',
+    concent:
+      'This type of private room can be rented and paid for only as an entire room. It is fitted with one single bed, accommodating maximum one person, a TV and a sink with hot and cold running water. The shower and toilet are shared and in the corridor.',
+    beds: '1 single',
+    price: '55.00',
+    maxPers: 1,
+  },
+  Double: {
+    title: 'Double Ensuite Room',
+    concent:
+      'This type of private room can be rented and paid for only as an entire room. It is fitted with one double bed, accommodating maximum two people, a TV, a bathtub and a sink with hot and cold running water. The shower and toilet are private and in the room.',
+    beds: '1 double, ensuite',
+    price: '75.00',
+    maxPers: 2,
+  },
+  Twin: {
+    title: 'Twin Ensuite Room',
+    concent:
+      'This type of private room can be rented and paid for only as an entire room. It is fitted with two separate single beds, accommodating maximum two people, a TV and a sink with hot and cold running water. The shower and toilet are private and in the room.',
+    beds: '2 twin, ensuite',
+    price: '75.00',
+    maxPers: 2,
+  },
+  Triple: {
+    title: 'Triple Basic Room',
+    concent:
+      'This type of private room can be rented and paid for only as an entire room. It is fitted with one bunk bed and one single bed, accommodating maximum three people, a TV and a sink with hot and cold running water. The shower and toilet are shared and in the corridor.',
+    beds: '1 double, 1 bunk bed',
+    price: '75.00',
+    maxPers: 3,
+  },
+  Four: {
+    title: 'Four Bedded Basic Room',
+    concent:
+      'This type of private room can be rented and paid for only as an entire room. It is fitted with two bunk beds, accommodating maximum four people, a TV and a sink with hot and cold running water. The shower and toilet are shared and in the corridor.',
+    beds: '2 bunk beds',
+    price: '100.00',
+    maxPers: 4,
+  },
+};
+export {
+  IconData,
+  InfoData,
+  NavData,
+  FooterData,
+  HomeData,
+  AboutData,
+  ReservationData,
+  RoomsData,
+};
