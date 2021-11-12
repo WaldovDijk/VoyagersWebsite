@@ -6,6 +6,59 @@ import About2 from './Images/Home/about2.jpg';
 import About3 from './Images/Home/about3.jpg';
 import HomeRoomBanner from './Images/price-overlay.png';
 
+import Single1 from './Images/Single/Single (1).jpg';
+import Single2 from './Images/Single/Single (2).jpg';
+import Single3 from './Images/Single/Single (3).jpg';
+import Single4 from './Images/Single/Single (4).jpg';
+import Single5 from './Images/Single/Single (5).jpg';
+import Single6 from './Images/Single/Single (6).jpg';
+import Single7 from './Images/Single/Single (7).jpg';
+import Single8 from './Images/Single/Single (8).jpg';
+import Single9 from './Images/Single/Single (9).jpg';
+import Single10 from './Images/Single/Single (10).jpg';
+
+import Double1 from './Images/Double/Double (1).jpg';
+import Double2 from './Images/Double/Double (2).jpg';
+import Double3 from './Images/Double/Double (3).jpg';
+import Double4 from './Images/Double/Double (4).jpg';
+import Double5 from './Images/Double/Double (5).jpg';
+
+import Twin1 from './Images/Twin/Twin (1).jpg';
+import Twin2 from './Images/Twin/Twin (2).jpg';
+import Twin3 from './Images/Twin/Twin (3).jpg';
+import Twin4 from './Images/Twin/Twin (4).jpg';
+import Twin5 from './Images/Twin/Twin (5).jpg';
+import Twin6 from './Images/Twin/Twin (6).jpg';
+import Twin7 from './Images/Twin/Twin (7).jpg';
+import Twin8 from './Images/Twin/Twin (8).jpg';
+import Twin9 from './Images/Twin/Twin (9).jpg';
+import Twin10 from './Images/Twin/Twin (10).jpg';
+import Twin11 from './Images/Twin/Twin (11).jpg';
+import Twin12 from './Images/Twin/Twin (12).jpg';
+
+import Triple1 from './Images/Triple/Triple (1).jpg';
+import Triple2 from './Images/Triple/Triple (2).jpg';
+import Triple3 from './Images/Triple/Triple (3).jpg';
+import Triple4 from './Images/Triple/Triple (4).jpg';
+import Triple5 from './Images/Triple/Triple (5).jpg';
+import Triple6 from './Images/Triple/Triple (6).jpg';
+import Triple7 from './Images/Triple/Triple (7).jpg';
+import Triple8 from './Images/Triple/Triple (8).jpg';
+import Triple9 from './Images/Triple/Triple (9).jpg';
+
+import Four1 from './Images/Four/Four (1).jpg';
+import Four2 from './Images/Four/Four (2).jpg';
+import Four3 from './Images/Four/Four (3).jpg';
+import Four4 from './Images/Four/Four (4).jpg';
+import Four5 from './Images/Four/Four (5).jpg';
+import Four6 from './Images/Four/Four (6).jpg';
+import Four7 from './Images/Four/Four (7).jpg';
+import Four8 from './Images/Four/Four (8).jpg';
+import Four9 from './Images/Four/Four (9).jpg';
+import Four10 from './Images/Four/Four (10).jpg';
+import Four11 from './Images/Four/Four (11).jpg';
+import Four12 from './Images/Four/Four (12).jpg';
+
 const InfoData = [
   {
     icon: 'location',
@@ -17,7 +70,7 @@ const InfoData = [
   },
   {
     icon: 'email',
-    content: 'info@hotelvoyagers.com',
+    content: 'info@voyagersamsterdam.com',
   },
 ];
 
@@ -109,7 +162,6 @@ const NavData = [
     title: 'rooms',
     route: '/rooms',
     subtitles: [
-      { title: 'all rooms', route: '/rooms', exact: true },
       { title: 'single - basic', route: '/rooms/single' },
       { title: 'double - ensuite', route: '/rooms/double' },
       { title: 'twin - ensuite', route: '/rooms/twin' },
@@ -341,50 +393,111 @@ const AboutData = {
 
 const ReservationData = {
   title: 'Reservations & Bookings',
-  content:
-    'Please click the below button to check our availability for the upcoming weeks / months and see if we have any rooms available.',
+  data: [
+    {
+      content: 'Making reservations is currently not available.',
+    },
+  ],
 };
 
 const RoomsData = {
   Single: {
     title: 'Single Basic Room',
-    concent:
+    content:
       'This type of private room can be rented and paid for only as an entire room. It is fitted with one single bed, accommodating maximum one person, a TV and a sink with hot and cold running water. The shower and toilet are shared and in the corridor.',
     beds: '1 single',
     price: '55.00',
     maxPers: 1,
+    rooms: [
+      { img: Single1 },
+      { img: Single2 },
+      { img: Single3 },
+      { img: Single4 },
+      { img: Single5 },
+      { img: Single6 },
+      { img: Single7 },
+      { img: Single8 },
+      { img: Single9 },
+      { img: Single10 },
+    ],
   },
   Double: {
     title: 'Double Ensuite Room',
-    concent:
+    content:
       'This type of private room can be rented and paid for only as an entire room. It is fitted with one double bed, accommodating maximum two people, a TV, a bathtub and a sink with hot and cold running water. The shower and toilet are private and in the room.',
     beds: '1 double, ensuite',
     price: '75.00',
     maxPers: 2,
+    rooms: [
+      { img: Double1 },
+      { img: Double2 },
+      { img: Double3 },
+      { img: Double4 },
+      { img: Double5 },
+    ],
   },
   Twin: {
     title: 'Twin Ensuite Room',
-    concent:
+    content:
       'This type of private room can be rented and paid for only as an entire room. It is fitted with two separate single beds, accommodating maximum two people, a TV and a sink with hot and cold running water. The shower and toilet are private and in the room.',
     beds: '2 twin, ensuite',
     price: '75.00',
     maxPers: 2,
+    rooms: [
+      { img: Twin1 },
+      { img: Twin2 },
+      { img: Twin3 },
+      { img: Twin4 },
+      { img: Twin5 },
+      { img: Twin6 },
+      { img: Twin7 },
+      { img: Twin8 },
+      { img: Twin9 },
+      { img: Twin10 },
+      { img: Twin11 },
+      { img: Twin12 },
+    ],
   },
   Triple: {
     title: 'Triple Basic Room',
-    concent:
+    content:
       'This type of private room can be rented and paid for only as an entire room. It is fitted with one bunk bed and one single bed, accommodating maximum three people, a TV and a sink with hot and cold running water. The shower and toilet are shared and in the corridor.',
     beds: '1 double, 1 bunk bed',
     price: '75.00',
     maxPers: 3,
+    rooms: [
+      { img: Triple1 },
+      { img: Triple2 },
+      { img: Triple3 },
+      { img: Triple4 },
+      { img: Triple5 },
+      { img: Triple6 },
+      { img: Triple7 },
+      { img: Triple8 },
+      { img: Triple9 },
+    ],
   },
   Four: {
     title: 'Four Bedded Basic Room',
-    concent:
+    content:
       'This type of private room can be rented and paid for only as an entire room. It is fitted with two bunk beds, accommodating maximum four people, a TV and a sink with hot and cold running water. The shower and toilet are shared and in the corridor.',
     beds: '2 bunk beds',
     price: '100.00',
     maxPers: 4,
+    rooms: [
+      { img: Four1 },
+      { img: Four2 },
+      { img: Four3 },
+      { img: Four4 },
+      { img: Four5 },
+      { img: Four6 },
+      { img: Four7 },
+      { img: Four8 },
+      { img: Four9 },
+      { img: Four10 },
+      { img: Four11 },
+      { img: Four12 },
+    ],
   },
 };
 export {

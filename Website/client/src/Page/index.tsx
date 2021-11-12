@@ -9,6 +9,9 @@ import Home from './Home';
 import TopBanner from '../Data/Images/top-banner.jpg';
 import { BreakPoints } from '../Style';
 import About from './About';
+import TextPage from '../Components/TextPage';
+import { ReservationData } from '../Data';
+import Rooms from './Rooms';
 
 const WebsiteWrapper = styled('div')`
   display: grid;
@@ -36,6 +39,13 @@ const Banner = styled('div')`
   height: 100%;
 `;
 
+const PageWrapper = styled('div')`
+  display: grid;
+  grid-template-columns: clamp(20rem, 90%, 120rem);
+  justify-content: center;
+  font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+`;
+
 const App = () => {
   return (
     <WebsiteWrapper>
@@ -47,7 +57,13 @@ const App = () => {
         </BannerWrapper>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
+          <Route path='/about' component={About} />
+          <Route exact path='/reservations'>
+            <PageWrapper>
+              <TextPage Data={ReservationData} />
+            </PageWrapper>
+          </Route>
+          <Route path='/rooms' component={Rooms} />
         </Switch>
         <Footer />
         {/*

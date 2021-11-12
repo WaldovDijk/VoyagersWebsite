@@ -7,7 +7,7 @@ import { createGlobalStyle } from 'styled-components';
 import './Style/Icons/fonts.scss';
 
 export const AppRoot = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
   body {
     margin: 0;

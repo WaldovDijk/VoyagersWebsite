@@ -9,11 +9,20 @@ const SectionWrapper = styled('div')`
   margin: auto;
 `;
 
+const SendEmail = styled('a')`
+  text-decoration: none;
+  color: white;
+`;
+
 const InfoSection = (data: { icon: string; content: string }) => {
   return (
     <SectionWrapper>
       <Icon size={2.4} marginRight={0.5} icon={data.icon} />
-      {data.content}
+      {data.icon === 'email' ? (
+        <SendEmail href={`mailto:${data.content}`}>{data.content}</SendEmail>
+      ) : (
+        <div>{data.content}</div>
+      )}
     </SectionWrapper>
   );
 };
