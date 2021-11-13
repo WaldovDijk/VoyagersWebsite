@@ -6,9 +6,12 @@ import { BreakPoints } from '../../Style';
 
 const HomeWrapper = styled('div')`
   display: grid;
-  padding: 4rem;
+  padding: 0rem;
   grid-template-columns: clamp(20rem, 90%, 120rem);
   justify-content: center;
+  @media (min-width: ${BreakPoints.sm}) {
+    padding: 4rem;
+  }
 `;
 const HomeContainer = styled('div')`
   display: grid;
