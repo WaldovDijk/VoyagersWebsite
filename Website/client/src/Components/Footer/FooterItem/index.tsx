@@ -35,6 +35,10 @@ const ItemLink = styled('div')`
     text-decoration: underline;
   }
 `;
+const SendEmail = styled('a')`
+  text-decoration: none;
+  color: white;
+`;
 
 const FooterItem = ({
   FooterData,
@@ -50,7 +54,15 @@ const FooterItem = ({
           <ItemContent key={i}>
             {data.icon && <Icon icon={data.icon} size={2} marginRight={1} />}
             {!data.link ? (
-              <div>{data.content}</div>
+              <div>
+                {data.icon === 'email' ? (
+                  <SendEmail href={`mailto:${data.content}`}>
+                    {data.content}
+                  </SendEmail>
+                ) : (
+                  data.content
+                )}
+              </div>
             ) : (
               <ItemLink onClick={() => window.open(data.link, '_blank')}>
                 {data.content}

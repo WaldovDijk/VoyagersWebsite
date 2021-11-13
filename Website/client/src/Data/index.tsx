@@ -88,7 +88,7 @@ const FooterData = [
       },
       {
         icon: 'email',
-        content: 'info@hotelvoyagers.com',
+        content: 'info@voyagersamsterdam.com',
       },
     ],
   },
