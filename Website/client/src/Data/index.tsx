@@ -97,15 +97,15 @@ const FooterData = [
     data: [
       {
         icon: 'location',
-        content: 'OPEN: Monday - Sunday : 10:00 ish - 23:00',
+        content: 'OPEN: Monday - Sunday : 08:00 ish - 24:00',
       },
       {
         icon: 'phone',
-        content: 'Check In: 15:00 pm (unless room is empty previous night)',
+        content: 'Check In: Currently unavailable',
       },
       {
         icon: 'email',
-        content: 'Check Out: 11:00 am',
+        content: 'Check Out: Currently unavailable',
       },
     ],
   },
@@ -177,7 +177,8 @@ const NavData = [
 
 const HomeData = {
   rooms: {
-    title: 'Check Out Our Comfortable Yet Affordable Rooms',
+    title:
+      'The hotel is currently undergoing renovations. If you have any questions be sure to send us an email!',
     banner: HomeRoomBanner,
     cards: [
       {

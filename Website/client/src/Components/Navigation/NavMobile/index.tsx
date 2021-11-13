@@ -16,7 +16,7 @@ const CustomLink = styled(NavLink)`
   text-transform: uppercase;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: min-content min-content;
+  grid-template-columns: max-content min-content;
   padding: 1.4rem 3rem;
   border-bottom: 1px solid #2e343a;
 
