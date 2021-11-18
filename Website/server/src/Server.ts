@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser';
 import methodOverride from 'method-override';
 import cors from 'cors';
 import '@tsed/ajv';
+import * as fs from 'fs';
 import { config, rootDir } from './config';
 
 @Configuration({
@@ -14,6 +15,10 @@ import { config, rootDir } from './config';
   acceptMimes: ['application/json'],
   httpPort: false,
   httpsPort: 4000,
+  httpsOptions: {
+    key: fs.readFileSync(`/etc/ssl/cert/voyagersamsterdam.com.key`),
+    cert: fs.readFileSync(`/etc/ssl/cert/voyagersamsterdam.com.pem`),
+  },
   mount: {
     '/': [`${rootDir}/controllers/**/*.ts`],
   },
