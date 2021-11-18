@@ -36,7 +36,11 @@ export class Server {
     this.app
       .use(
         cors({
-          origin: ['https://www.voyagersamsterdam.com/'],
+          origin: [
+            'https://www.voyagersamsterdam.com/',
+            'https://voyagersamsterdam.com/',
+          ],
+          credentials: true,
         })
       )
       .use(cookieParser())
