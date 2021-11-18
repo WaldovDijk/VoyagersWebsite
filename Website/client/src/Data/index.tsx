@@ -501,6 +501,17 @@ const RoomsData = {
     ],
   },
 };
+
+const ContactData = {
+  title: 'Contact Us',
+  subTitle: 'Contact Form',
+  details: {
+    title: 'Contact Details',
+    mail: 'info@voyagersamsterdam.com',
+    phone: '0031 (0)20 6246871',
+    adress: 'Geldersekade 2 1012 BH Amsterdam',
+  },
+};
 export {
   IconData,
   InfoData,
@@ -510,4 +521,5 @@ export {
   AboutData,
   ReservationData,
   RoomsData,
+  ContactData,
 };

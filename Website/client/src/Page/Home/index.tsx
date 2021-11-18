@@ -5,10 +5,10 @@ import Testimonials from '../../Components/Home/Testimonials';
 import { BreakPoints } from '../../Style';
 
 const HomeWrapper = styled('div')`
+  grid-column: 2/3;
   display: grid;
-  padding: 2rem;
-  grid-template-columns: clamp(20rem, 90%, 120rem);
   justify-content: center;
+  padding: 2rem;
   @media (min-width: ${BreakPoints.sm}) {
     padding: 4rem;
   }

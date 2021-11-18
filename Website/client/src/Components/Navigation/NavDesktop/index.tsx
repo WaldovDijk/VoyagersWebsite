@@ -74,6 +74,9 @@ const SubLink = styled(NavLink)`
 
 const NavWrapper = styled('div')`
   position: relative;
+  &:not(:last-child) {
+    padding-right: 1rem;
+  }
 
   ${(props: { hover: boolean }) => {
     if (props.hover) {

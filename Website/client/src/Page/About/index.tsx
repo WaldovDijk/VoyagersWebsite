@@ -5,7 +5,7 @@ import { AboutData } from '../../Data';
 
 const AboutWrapper = styled('div')`
   display: grid;
-  grid-template-columns: clamp(20rem, 90%, 120rem);
+  grid-column: 2/3;
   justify-content: center;
   font-size: clamp(1.4rem, 1.5vw, 1.6rem);
 `;

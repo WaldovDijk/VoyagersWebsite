@@ -12,10 +12,13 @@ import About from './About';
 import TextPage from '../Components/TextPage';
 import { ReservationData } from '../Data';
 import Rooms from './Rooms';
+import Helmet from 'react-helmet';
+import Contact from './Contact';
 
 const WebsiteWrapper = styled('div')`
   display: grid;
 
+  grid-template-columns: 1fr minmax(0, 120rem) 1fr;
   grid-template-rows: 7rem auto 1fr auto;
   min-height: 100%;
   box-sizing: border-box;
@@ -26,6 +29,7 @@ const WebsiteWrapper = styled('div')`
 `;
 
 const BannerWrapper = styled('div')`
+  grid-column: 1/-1;
   display: grid;
   grid-template-rows: clamp(10rem, 30vw, 50rem);
 `;
@@ -41,7 +45,8 @@ const Banner = styled('div')`
 
 const PageWrapper = styled('div')`
   display: grid;
-  grid-template-columns: clamp(20rem, 90%, 120rem);
+  grid-template-rows: 5rem 1fr;
+  grid-column: 2/3;
   justify-content: center;
   font-size: clamp(1.4rem, 1.5vw, 1.6rem);
 `;
@@ -49,6 +54,10 @@ const PageWrapper = styled('div')`
 const App = () => {
   return (
     <WebsiteWrapper>
+      <Helmet>
+        <title>Voyagers Amsterdam | Home</title>
+        <meta name='description' content='Homepage of the website.' />
+      </Helmet>
       <Router>
         <InfoHeader />
         <Navigation />
@@ -64,17 +73,9 @@ const App = () => {
             </PageWrapper>
           </Route>
           <Route path='/rooms' component={Rooms} />
+          <Route path='/contact' component={Contact} />
         </Switch>
         <Footer />
-        {/*
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/about' component={Home} />
-        <Route exact path='/reservations' component={Home} />
-        <Route exact path='/rooms' component={Home} />
-        <Route exact path='/contact' component={Home} />
-      </Switch>
-      */}
       </Router>
     </WebsiteWrapper>
   );

@@ -8,7 +8,7 @@ interface IData {
 const PageWrapper = styled('div')`
   display: grid;
   row-gap: 2rem;
-  padding: 4rem;
+  padding: 2rem;
 `;
 
 const PageTitle = styled('div')`

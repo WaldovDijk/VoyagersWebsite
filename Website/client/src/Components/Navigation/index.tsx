@@ -10,21 +10,23 @@ import NavItem from './NavDesktop';
 import NavMobile from './NavMobile';
 
 const NavWrapper = styled('div')`
+  grid-column: 2/3;
   display: grid;
   width: 100%;
   grid-auto-flow: column;
-  padding: 0;
-  box-sizing: border-box;
-  margin: auto;
-
-  @media (min-width: ${BreakPoints.lg}) {
+  grid-template-columns: min-content 1fr 1fr;
+  padding: 0 2rem;
+  @media (min-width: ${BreakPoints.sm}) {
     padding: 0 4rem;
   }
+  box-sizing: border-box;
+  margin: auto;
 `;
 
 const Nav = styled('div')`
+  grid-column: 1/-1;
   display: grid;
-  grid-template-columns: clamp(20rem, 90%, 120rem);
+  grid-template-columns: 1fr minmax(0, 120rem) 1fr;
   background-color: white;
   font-size: clamp(1.4rem, 1.5vw, 1.6rem);
   color: black;
@@ -40,11 +42,13 @@ const NavLogo = styled('img')`
 `;
 
 const ItemWrapper = styled('div')`
+  grid-column: 3/-1;
   display: grid;
   grid-auto-flow: column;
 `;
 
 const MobileWrapper = styled('div')`
+  grid-column: 3/-1;
   display: grid;
   align-items: center;
   justify-content: end;

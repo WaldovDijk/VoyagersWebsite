@@ -4,19 +4,18 @@ import { BreakPoints } from '../../Style';
 import FooterItem, { ItemWrapper } from './FooterItem';
 
 const FooterWrapper = styled('div')`
+  grid-column: 1/-1;
   margin-top: auto;
   background-color: #677c8b;
-  width: 100%;
+  padding-top: 5rem;
 `;
 
 const FooterBody = styled('div')`
   margin: auto;
-
-  padding: 5rem 2rem 3rem;
+  grid-column: 2/3;
   @media (min-width: ${BreakPoints.md}) {
     justify-content: center;
     display: grid;
-    grid-template-columns: clamp(20rem, 90%, 120rem);
     padding: 0;
   }
 `;
@@ -27,7 +26,10 @@ const Wrapper = styled('div')`
   display: grid;
   grid-auto-flow: row;
   align-items: start;
-  padding: 3rem;
+  padding: 2rem;
+  @media (min-width: ${BreakPoints.sm}) {
+    padding: 4rem;
+  }
   grid-gap: 2rem;
   @media (min-width: ${BreakPoints.md}) {
     grid-auto-flow: column;
@@ -48,6 +50,7 @@ const Wrapper = styled('div')`
 `;
 
 const FooterCopy = styled('div')`
+  grid-column: 1/-1;
   border-top: 1px dotted #fff;
   padding: 3rem;
   text-align: center;

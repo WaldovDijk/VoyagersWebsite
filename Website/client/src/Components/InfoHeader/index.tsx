@@ -6,7 +6,8 @@ import { BreakPoints } from '../../Style';
 
 const InfoHeaderWrapper = styled('div')`
   display: none;
-  grid-template-columns: clamp(20rem, 90%, 120rem);
+  grid-column: 1/-1;
+  grid-template-columns: 1fr minmax(0, 120rem) 1fr;
   background-color: #677c8b;
   font-size: 1.6rem;
   color: white;
@@ -18,6 +19,7 @@ const InfoHeaderWrapper = styled('div')`
 `;
 
 const InfoHeaderBody = styled('div')`
+  grid-column: 2/3;
   display: grid;
   grid-auto-flow: column;
   height: 100%;
