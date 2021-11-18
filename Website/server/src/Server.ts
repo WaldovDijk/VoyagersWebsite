@@ -15,7 +15,7 @@ import { config, rootDir } from './config';
   httpPort: false,
   httpsPort: 4000, // CHANGE
   mount: {
-    '/api': [`${rootDir}/controllers/**/*.ts`],
+    '/': [`${rootDir}/controllers/**/*.ts`],
   },
   views: {
     root: `${rootDir}/views`,
