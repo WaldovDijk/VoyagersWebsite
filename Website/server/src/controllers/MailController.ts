@@ -1,4 +1,4 @@
-import { BodyParams, Res } from '@tsed/common';
+import { BodyParams, Res, Get } from '@tsed/common';
 import { Controller } from '@tsed/di';
 import { Post } from '@tsed/schema';
 import nodemailer from 'nodemailer';
@@ -38,5 +38,9 @@ export class HelloWorldController {
       }
     });
     res.send('done');
+  }
+  @Get('/')
+  get() { 
+    return 'hello'
   }
 }

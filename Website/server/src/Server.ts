@@ -13,7 +13,7 @@ import { config, rootDir } from './config';
   ...config,
   acceptMimes: ['application/json'],
   httpPort: false,
-  httpsPort: 4000, // CHANGE
+  httpsPort: 4000,
   mount: {
     '/': [`${rootDir}/controllers/**/*.ts`],
   },
