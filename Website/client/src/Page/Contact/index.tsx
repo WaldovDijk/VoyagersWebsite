@@ -92,7 +92,7 @@ const Contact = () => {
     const response: AxiosResponse<string> = await Axios({
       method: 'POST',
       baseURL: 'https://voyagersamsterdam.com',
-      url: '/auth/login',
+      url: '/api/mail',
       data: {
         subject: subject,
         email: email,
