@@ -98,6 +98,7 @@ const Contact = () => {
         email: email,
         content: textField,
       },
+      withCredentials: true,
       validateStatus: null,
     });
     if (response.status !== 200) {
