@@ -37,8 +37,8 @@ export class Server {
       .use(
         cors({
           origin: [
-            'https://www.voyagersamsterdam.com/',
-            'https://voyagersamsterdam.com/',
+            'https://www.voyagersamsterdam.com',
+            'https://voyagersamsterdam.com',
           ],
           credentials: true,
         })
