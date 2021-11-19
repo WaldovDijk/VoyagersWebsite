@@ -16,8 +16,8 @@ import { config, rootDir } from './config';
   httpPort: false,
   httpsPort: 4000,
   httpsOptions: {
-    key: fs.readFileSync(`/etc/ssl/cert/voyagersamsterdam.com.key`),
-    cert: fs.readFileSync(`/etc/ssl/cert/voyagersamsterdam.com.pem`),
+    key: fs.readFileSync(`${rootDir}../certification/localhost-key.pem`),
+    cert: fs.readFileSync(`${rootDir}../certification/localhost.pem`),
   },
   mount: {
     '/': [`${rootDir}/controllers/**/*.ts`],

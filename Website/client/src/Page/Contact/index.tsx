@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { BreakPoints } from '../../Style';
 import { ContactData } from '../../Data';
 import { useState } from 'react';
-import Axios, { AxiosResponse } from 'axios';
 
 const ContactWrapper = styled('div')`
   grid-column: 2/3;
@@ -83,29 +82,12 @@ const FormWrapper = styled('form')``;
 const Contact = () => {
   const { title, subTitle, details } = ContactData;
   const [subject, setSubject] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
   const [textField, setTextField] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response: AxiosResponse<string> = await Axios({
-      method: 'POST',
-      baseURL: 'https://voyagersamsterdam.com',
-      url: '/api/mail',
-      data: {
-        subject: subject,
-        email: email,
-        content: textField,
-      },
-      withCredentials: true,
-      validateStatus: null,
-    });
-    if (response.status !== 200) {
-      setMessage('Message Send!');
-    } else {
-      setMessage('Message failed to send, Use own email!');
-    }
+    //@ts-ignore
+    window.location = `mailto:info@voyagersamsterdam.com?subject=${subject}&body=${textField}`;
   };
 
   return (
@@ -120,13 +102,6 @@ const Contact = () => {
           placeholder='Subject *'
           required
         />
-        <FormInput
-          value={email}
-          type='email'
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder='Your email *'
-          required
-        />
         <TextField
           value={textField}
           onChange={(e) => setTextField(e.target.value)}
@@ -134,7 +109,6 @@ const Contact = () => {
           required
         />
         <InputButton type='submit' value='Send' />
-        {message && <div>{message}</div>}
       </FormWrapper>
       <ContactDetails>
         <DetailsTitle>{details.title}</DetailsTitle>
