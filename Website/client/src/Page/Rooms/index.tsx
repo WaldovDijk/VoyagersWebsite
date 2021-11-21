@@ -2,12 +2,16 @@ import { Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import RoomsPage from '../../Components/RoomsPage';
 import { RoomsData } from '../../Data';
+import { BreakPoints } from '../../Style';
 
 const AboutWrapper = styled('div')`
-  display: grid;
   grid-column: 2/3;
+  display: grid;
   justify-content: center;
-  font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+  padding: 2rem;
+  @media (min-width: ${BreakPoints.sm}) {
+    padding: 4rem;
+  }
 `;
 
 const Rooms = () => {

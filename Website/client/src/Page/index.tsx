@@ -45,7 +45,6 @@ const Banner = styled('div')`
 
 const PageWrapper = styled('div')`
   display: grid;
-  grid-template-rows: 5rem 1fr;
   grid-column: 2/3;
   justify-content: center;
   font-size: clamp(1.4rem, 1.5vw, 1.6rem);

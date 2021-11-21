@@ -8,20 +8,23 @@ const ContactWrapper = styled('div')`
   gap: 2rem;
   padding: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   @media (min-width: ${BreakPoints.sm}) {
     padding: 4rem;
+  }
+  @media (min-width: ${BreakPoints.md}) {
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
 const ContactTitle = styled('div')`
   grid-column: 1/-1;
-  font-size: 5rem;
+  font-size: clamp(3rem, 5vw, 5rem);
   margin-bottom: 1rem;
 `;
 
 const FormTitle = styled('div')`
-  font-size: 3rem;
+  font-size: clamp(2rem, 3vw, 3rem);
   margin-bottom: 2rem;
 `;
 
@@ -57,12 +60,12 @@ const ContactDetails = styled('div')`
 `;
 
 const DetailsTitle = styled('div')`
-  font-size: 3rem;
+  font-size: clamp(2rem, 3vw, 3rem);
   padding-bottom: 3rem;
 `;
 
 const DetailsContent = styled('div')`
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 1.5vw, 2rem);
   padding-bottom: 0.5rem;
 `;
 

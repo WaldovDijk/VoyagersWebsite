@@ -80,7 +80,6 @@ const MobileItemWrapper = styled('div')`
 const Navigation = () => {
   const size = useWindowSize();
   const [open, setOpen] = useState<boolean>(false);
-  console.log(size);
   return (
     <Nav>
       <NavWrapper>

@@ -27,7 +27,6 @@ const AboutImg = styled('img')`
     width: auto;
     padding: 0.4rem;
     ${(props: { number: number }) => {
-      console.log(props.number);
       switch (props.number) {
         case 1:
           return `border-radius: 0 0.4rem 0.4rem 0rem; grid-column: 2/ span 1;`;
@@ -37,7 +36,6 @@ const AboutImg = styled('img')`
     }};
   }
   ${(props: { number: number }) => {
-    console.log(props.number);
     switch (props.number) {
       case 1:
         return `border-radius: 0 0.4rem 0.4rem 0rem;`;
